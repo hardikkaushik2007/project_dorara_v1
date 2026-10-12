@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Project Dora</string>
+    <string name="dora_greeting">Hey! Main Dora hoon. Batao, aaj kya karna hai?</string>
+    <string name="dora_tagline">Your Voice-First AI Companion for App Discovery</string>
+</resources>
