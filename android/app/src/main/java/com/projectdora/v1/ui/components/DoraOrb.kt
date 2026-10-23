@@ -26,6 +26,7 @@ import com.projectdora.v1.ui.theme.CyanGlow
 import com.projectdora.v1.ui.theme.CyberBlue
 import com.projectdora.v1.ui.theme.ElectricCyan
 import com.projectdora.v1.ui.theme.HologramPurple
+import com.projectdora.v1.ui.theme.NavyBackground
 import com.projectdora.v1.ui.theme.StatusAttempted
 import com.projectdora.v1.ui.theme.StatusFailed
 import kotlin.math.cos
