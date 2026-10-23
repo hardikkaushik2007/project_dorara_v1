@@ -24,6 +24,16 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/")
+def root():
+    return {
+        "message": "Project Dora V1 Backend is live and running!",
+        "service": "project-dora-backend",
+        "docs_url": "/docs",
+        "health_check": "/api/v1/health",
+        "total_apps": len(get_catalogue())
+    }
+
 @app.get("/api/v1/health")
 def health_check():
     return {
