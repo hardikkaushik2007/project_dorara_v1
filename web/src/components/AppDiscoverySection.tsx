@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AppEntity } from "@/lib/utils";
 import { ExternalLink, Check, Copy, AlertCircle, Smartphone, Globe } from "lucide-react";
 
@@ -18,7 +18,13 @@ export function AppDiscoverySection({
   selectedForCompare,
 }: DiscoveryProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>("ALL");
-  const [searchFilter, setSearchFilter] = useState<string>("");
+  const [searchFilter, setSearchFilter] = useState<string>(initialQuery || "");
+
+  useEffect(() => {
+    if (initialQuery) {
+      setSearchFilter(initialQuery);
+    }
+  }, [initialQuery]);
 
   const categories = ["ALL", ...Array.from(new Set(apps.map((a) => a.category)))];
 

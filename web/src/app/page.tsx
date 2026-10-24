@@ -20,7 +20,6 @@ export default function Home() {
   const [activeQuery, setActiveQuery] = useState("");
 
   useEffect(() => {
-    // Attempt fetching live catalogue from Vercel backend if available
     fetch("/api/v1/apps")
       .then((res) => {
         if (!res.ok) throw new Error("Backend offline");
@@ -57,7 +56,8 @@ export default function Home() {
     <main className="min-h-screen bg-background text-foreground flex flex-col selection:bg-primary/20 selection:text-primary">
       <Navigation />
       <Hero
-        onRunSample={(query) => {
+        apps={apps}
+        onRunQuery={(query) => {
           setActiveQuery(query);
         }}
       />
